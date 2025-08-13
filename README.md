@@ -27,7 +27,6 @@ pip install -r requirements.txt
 API_KEY=your_usda_api_key
 JWT_KEY=your_jwt_secret_key_at_least_32_chars
 
-
 4. Run MongoDB:
 ```bash
 docker run -d --name mongodb -p 27017:27017 mongo:latest
@@ -40,7 +39,8 @@ uvicorn main:app --reload
 
 ## API Documentation
 
-Once running, visit `http://localhost:8000/docs` for interactive API documentation.
+- **Local:** `http://localhost:8000/docs`
+- **Live:** [https://calorie-generator-production.up.railway.app/docs](https://calorie-generator-production.up.railway.app/docs)
 
 ## Project Structure
 
@@ -50,3 +50,10 @@ Once running, visit `http://localhost:8000/docs` for interactive API documentati
 - `database/` - Database connections
 - `middleware/` - Custom middleware
 - `routes/` - API endpoints
+
+## Deployment
+
+This application is deployed on Railway using Docker. The deployment includes:
+- FastAPI application container
+- MongoDB database service
+- Automatic environment variable management
