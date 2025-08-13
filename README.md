@@ -24,9 +24,10 @@ pip install -r requirements.txt
 ```
 
 3. Set up environment variables in `.env`:
+```bash
 API_KEY=your_usda_api_key
 JWT_KEY=your_jwt_secret_key_at_least_32_chars
-
+```
 4. Run MongoDB:
 ```bash
 docker run -d --name mongodb -p 27017:27017 mongo:latest
